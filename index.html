@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Echo Squad | Rainbow Six Siege PS5 Clan | Member gesucht</title>
-    <meta name="description" content="Werde Teil von Echo Squad! Wir sind ein ambitionierter, aktiver deutscher Rainbow Six Siege PS5 Clan und suchen aktuell neue Member. Tritt unserer WhatsApp-Gruppe bei!">
+    <meta name="description" content="Werde Teil von Echo Squad! Wir sind ein ambitionierter Rainbow Six Siege PS5 Clan und suchen aktuell neue Member. Schau dir unsere Gameplay-Highlights an und tritt dem Team bei!">
 
     <style>
         body {
@@ -18,7 +18,7 @@
 
         header {
             background: linear-gradient(180deg, #0d1a26 0%, #050a0f 100%);
-            padding: 60px 20px 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-bottom: 2px solid #00d4ff;
         }
@@ -45,15 +45,6 @@
             text-transform: uppercase;
         }
 
-        .header-sub {
-            font-size: 1.1rem;
-            color: #00d4ff;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin: 5px 0 25px 0;
-            text-transform: uppercase;
-        }
-
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -77,57 +68,91 @@
         }
 
         .requirements-list li {
-            margin-bottom: 15px;
-            padding-left: 35px;
+            margin-bottom: 12px;
+            padding-left: 30px;
             position: relative;
-            font-size: 1.05rem;
         }
 
-        .requirements-list li .icon {
+        .requirements-list li::before {
+            content: '➤';
             position: absolute;
             left: 0;
-            top: 2px;
+            color: #00d4ff;
         }
 
-        /* Kriterien Tabelle */
-        .kriterien-table {
+        /* Styling für den neuen Crossover-Bereich */
+        .crossover-section {
+            text-align: center;
+        }
+
+        .lineup-img {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #00d4ff; /* Passend zum blauen Clan-Design */
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            margin-bottom: 25px;
+        }
+
+        .operator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .operator-card {
             background: rgba(13, 26, 38, 0.6);
+            border-left: 3px solid #00d4ff;
+            padding: 12px 15px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .operator-card:hover {
+            transform: translateY(-3px);
+            background: rgba(13, 26, 38, 0.9);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+
+        .operator-card strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .operator-card span {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+
+        /* Media Grid für Shorts */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 177.78%; /* 9:16 Format */
+            height: 0;
             border-radius: 8px;
             overflow: hidden;
+            border: 1px solid #30363d;
         }
 
-        .kriterien-table th, .kriterien-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #30363d;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-
-        .kriterien-table th {
-            background: #0d1a26;
-            color: #00d4ff;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        .kriterien-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .kriterien-tag {
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .tag-gameplay { background: #ff9f43; color: #050a0f; }
-        .tag-aktivitaet { background: #10ac84; color: #fff; }
-        .tag-team { background: #5f27cd; color: #fff; }
 
         /* Stats Buttons Design */
         .btn-stats {
@@ -154,22 +179,21 @@
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
         }
 
-        /* WhatsApp Button Design */
-        .btn-whatsapp {
+        .btn-discord {
             display: inline-block;
-            background: #25D366;
+            background: #5865F2;
             color: #fff;
             padding: 15px 35px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            margin-top: 20px;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 10px rgba(37, 211, 102, 0.3);
         }
 
-        .btn-whatsapp:hover {
+        .btn-discord:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);
         }
 
         footer { text-align: center; padding: 40px; color: #484f58; font-size: 0.8rem; }
@@ -181,55 +205,55 @@
     <img src="ECHO SQUAD Emblem mit Taktikriffen.png" alt="Echo Squad Emblem" class="logo-img">
     <div class="clan-tag">[ECHO]</div>
     <h1>ECHO SQUAD</h1>
-    <div class="header-sub">Aktiver deutscher R6 PS5 Clan</div>
-    <div style="margin-top: 15px;">
-        <a href="https://chat.whatsapp.com/GJa04TnNbBTDVpdSyrbA6M" target="_blank" class="btn-whatsapp">📲 JETZT PER WHATSAPP MELDEN</a>
-    </div>
+    <p>OFFIZIELLES R6 PS5 RECRUITMENT</p>
 </header>
 
 <div class="container">
     
     <div class="section">
         <h2>Über uns</h2>
-        <p>Wir sind ein ambitioniertes und eingespieltes Team aus aktuell 7 Spielern. Bei uns stehen Taktik, Teamplay und der gemeinsame Spaß im Vordergrund, ganz ohne toxischen Druck. Unsere Ränge bewegen sich im soliden Silber- bis Gold-Bereich, aber das Wichtigste für uns ist das Zusammenspiel.</p>
-        <p><strong>Wichtig:</strong> Dein aktueller Rang ist bei uns zweitrangig!</p>
+        <p>Wir sind ein eingespieltes Duo (18 & 20 J.), bestehend aus einem IGL mit Clan-Erfahrung und einem Flex-Spieler. Wir stehen aktuell zwischen Silber 5 und Gold 3. Bei uns steht das Team im Vordergrund, nicht der Druck.</p>
+        <p><strong>Wichtig:</strong> Der Rang ist bei uns zweitrangig!</p>
     </div>
 
     <div class="section">
-        <h2>Eckdaten zur Suche</h2>
+        <h2>Dein Weg ins Team</h2>
         <ul class="requirements-list">
-            <li><span class="icon">🎮</span><strong>Plattform:</strong> Nur PS5</li>
-            <li><span class="icon">🔞</span><strong>Alter:</strong> Ab 16/17 Jahren (Open End)</li>
-            <li><span class="icon">🤝</span><strong>Einstellung:</strong> Hauptsache du bist motiviert, aktiv und teamfähig.</li>
+            <li><strong>Plattform:</strong> Nur PS5</li>
+            <li><strong>Alter:</strong> Ab 16/17 Jahren (Open End)</li>
+            <li><strong>Skill-Level:</strong> Kupfer bis maximal Platin 3</li>
+            <li><strong>Einstellung:</strong> Egal ob Anfänger oder Erfahrener – Hauptsache du willst dich verbessern.</li>
         </ul>
     </div>
 
-    <div class="section">
-        <h2>Was dich bei uns erwartet & worauf es ankommt</h2>
-        <p>Hier siehst du genau, nach welchen Kriterien wir unser Team aufbauen und was uns beim gemeinsamen Zocken wichtig ist:</p>
+    <div class="section crossover-section">
+        <h2>Das Ultimative Crossover Line-up</h2>
+        <p>Unsere favorisierten Elite- und Crossover-Skins auf einen Blick:</p>
         
-        <table class="kriterien-table">
-            <thead>
-                <tr>
-                    <th style="width: 25%;">Bereich</th>
-                    <th>Unsere Kriterien & Erwartungen</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="kriterien-tag tag-gameplay">Gameplay</span></td>
-                    <td>Fokus auf Taktik und saubere Callouts. Wir gewinnen und verlieren als Team – kein sinnloses Reinrennen oder gegenseitiges Flamen.</td>
-                </tr>
-                <tr>
-                    <td><span class="kriterien-tag tag-aktivitaet">Aktivität</span></td>
-                    <td>Wir spielen regelmäßig Ranked, um uns einzuspielen. Reallife geht natürlich immer vor, aber eine gewisse Grundaktivität in Game und Gruppe sollte da sein.</td>
-                </tr>
-                <tr>
-                    <td><span class="kriterien-tag tag-team">Clan-Leben</span></td>
-                    <td>Unsere Absprachen laufen komplett aktiv über WhatsApp. Neue Member werden direkt integriert. Wer Bock hat, sich langfristig mit uns zu verbessern, ist hier richtig!</td>
-                </tr>
-            </tbody>
-        </table>
+        <img src="ChatGPT Image 7. Juni 2026, 14_05_57.png" alt="Echo Squad Crossover Lineup" class="lineup-img">
+
+        <div class="operator-grid">
+            <div class="operator-card"><strong>Jackal</strong><span>Schakal-Visier Look</span></div>
+            <div class="operator-card"><strong>Thorn</strong><span>Resident Evil (Rebecca)</span></div>
+            <div class="operator-card"><strong>Ash</strong><span>Tomb Raider (Lara Croft)</span></div>
+            <div class="operator-card"><strong>Sledge</strong><span>Halo (Master Chief)</span></div>
+            <div class="operator-card"><strong>Blackbeard</strong><span>Yakuza (Kazuma Kiryu)</span></div>
+            <div class="operator-card"><strong>Bandit</strong><span>Gold-Schwarzes Set</span></div>
+            <div class="operator-card"><strong>Kaid</strong><span>Traditioneller Elite Look</span></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Unsere Besten Momente</h2>
+        <p>Schau dir unsere krassesten Clips direkt vom Feld an:</p>
+        <div class="media-grid">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OCkKjK7ymbY" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/afukTI6T8uw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
     <div class="section">
@@ -242,28 +266,25 @@
             <a href="https://r6.tracker.network/r6siege/profile/psn/ECHO_LuckyShot/overview" target="_blank" class="btn-stats">
                 <span>📊</span> ECHO_LuckyShot Stats
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/lZombyI/overview" target="_blank" class="btn-stats">
+             <a href="https://r6.tracker.network/r6siege/profile/psn/lZombyI/overview" target="_blank" class="btn-stats">
                 <span>📊</span> lZombyI Stats
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/Ali_Radikali_88/overview" target="_blank" class="btn-stats">
+                <a href="https://r6.tracker.network/r6siege/profile/psn/Ali_Radikali_88/overview" target="_blank" class="btn-stats">
                 <span>📊</span> Ali_Radikali_88 Stats
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/Chris-Lautree_/overview" target="_blank" class="btn-stats">
-                <span>📊</span> Chris-Lautree_ Stats
+                <a href="https://r6.tracker.network/r6siege/profile/psn/Chris-Lautree_/overview" target="_blank" class="btn-stats">
+                <span>📊</span> Chris_Lautree_Stats
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/Gongiii07/overview" target="_blank" class="btn-stats">
+                <a href="https://r6.tracker.network/r6siege/profile/psn/Gongiii07/overview" target="_blank" class="btn-stats">
                 <span>📊</span> Gongiii07 Stats
-            </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/STARED-1/overview" target="_blank" class="btn-stats">
-                <span>📊</span> STARED-1 Stats
             </a>
         </div>
     </div>
 
     <div class="section" style="text-align: center;">
         <h2>Unser Ziel</h2>
-        <p>Kein Stress, keine Turniere am Anfang. Wir spielen rein Ranked, um uns über die nächsten Monate perfekt aufeinander einzuspielen und als festes Team zu wachsen.</p>
-        <a href="https://chat.whatsapp.com/GJa04TnNbBTDVpdSyrbA6M" target="_blank" class="btn-whatsapp">📲 JETZT DER WHATSAPP-GRUPPE BEITRETEN</a>
+        <p>Kein Stress, keine Turniere am Anfang. Wir spielen rein Ranked, um uns über die nächsten Monate einzuspielen.</p>
+        <a href="https://discord.gg/HdFCMhzQ9R" class="btn-discord">JETZT AUF DISCORD MELDEN</a>
     </div>
 </div>
 
