@@ -148,29 +148,56 @@
             height: 100%;
         }
 
-        /* Stats Buttons Design */
-        .btn-stats {
-            background: #0d1a26;
-            color: #ffffff;
-            border: 2px solid #00d4ff;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-width: 220px;
-            justify-content: center;
-            box-shadow: 0 0 5px rgba(0, 212, 255, 0.2);
+        /* NEUES GRID FÜR DIE STRUKTURIERTEN CLAN STATS */
+        .stats-grid {
+            display: grid;
+            /* Erstellt automatisch Spalten, die perfekt auf PC und Handy passen */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .btn-stats:hover {
-            background: #00d4ff;
-            color: #050a0f;
+        /* NEUES DESIGN FÜR DIE EINZELNEN MEMBER-KARTEN */
+        .member-card {
+            background: #0d1a26;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-card:hover {
+            border-color: #00d4ff;
             transform: translateY(-3px);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+            background: rgba(13, 26, 38, 0.9);
+        }
+
+        .member-icon {
+            font-size: 1.5rem;
+        }
+
+        .member-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            word-break: break-word;
+            text-align: center;
+        }
+
+        .member-view-text {
+            font-size: 0.75rem;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
         }
 
         .btn-discord {
@@ -281,34 +308,64 @@
     <div class="section">
         <h2>Clan Stats & Rankings</h2>
         <p>Checkt unsere aktuellen Leistungen live auf R6-Tracker:</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px;">
-            <a href="https://r6.tracker.network/r6siege/profile/psn/ECHO_Druffy/overview" target="_blank" class="btn-stats">
-                <span>📊</span> ECHO_Druffy Stats
+        
+        <!-- HIER IST DAS NEUE KARTEN-GRID -->
+        <div class="stats-grid">
+            
+            <a href="https://r6.tracker.network/r6siege/profile/psn/ECHO_Druffy/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">ECHO_Druffy</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/ECHO_LuckyShot/overview" target="_blank" class="btn-stats">
-                <span>📊</span> ECHO_LuckyShot Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/ECHO_LuckyShot/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">ECHO_LuckyShot</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-             <a href="https://r6.tracker.network/r6siege/profile/psn/lZombyI/overview" target="_blank" class="btn-stats">
-                <span>📊</span> lZombyI Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/lZombyI/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">lZombyI</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-                <a href="https://r6.tracker.network/r6siege/profile/psn/Ali_Radikali_88/overview" target="_blank" class="btn-stats">
-                <span>📊</span> Ali_Radikali_88 Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/Ali_Radikali_88/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">Ali_Radikali_88</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-                <a href="https://r6.tracker.network/r6siege/profile/psn/Chris-Lautree_/overview" target="_blank" class="btn-stats">
-                <span>📊</span> Chris_Lautree_Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/Chris-Lautree_/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">Chris_Lautree_</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-                <a href="https://r6.tracker.network/r6siege/profile/psn/Gongiii07/overview" target="_blank" class="btn-stats">
-                <span>📊</span> Gongiii07 Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/Gongiii07/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">Gongiii07</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-             <a href="https://r6.tracker.network/r6siege/profile/psn/STARED-1/overview" target="_blank" class="btn-stats">
-                <span>📊</span> STARED-1 Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/STARED-1/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">STARED-1</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/BG-Shxdy/overview" target="_blank" class="btn-stats">
-                <span>📊</span> BG-Shxdy Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/BG-Shxdy/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">BG-Shxdy</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
-            <a href="https://r6.tracker.network/r6siege/profile/psn/V3nom_Sn1pez/overview" target="_blank" class="btn-stats">
-                <span>📊</span> V3nom_Sn1pez Stats
+
+            <a href="https://r6.tracker.network/r6siege/profile/psn/V3nom_Sn1pez/overview" target="_blank" class="member-card">
+                <span class="member-icon">📊</span>
+                <span class="member-name">V3nom_Sn1pez</span>
+                <span class="member-view-text">Stats ansehen</span>
             </a>
+
         </div>
     </div>
 
