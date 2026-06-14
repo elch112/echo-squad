@@ -376,7 +376,20 @@
     </div>
 </div>
 
-<footer>
+<footer style="text-align: center; padding: 40px; color: #484f58; font-size: 0.8rem;">
+    <!-- SSL Siegel Container -->
+    <div style="margin-bottom: 15px;">
+        <a href="https://www.checkdomain.de/unternehmen/garantie/ssl/popup/" 
+           onclick="window.open(this.href + '?host=' + window.location.host,'','height=600,width=560,scrollbars=yes'); return false;">
+            <!-- Hier wurde style="width: 80px; height: auto;" hinzugefügt, damit es nicht zu riesig ist -->
+            <img src="https://www.checkdomain.de/assets/bundles/web/app/widget/seal/img/ssl_certificate/de/150x150.png?20260520-124251" 
+                 alt="SSL-Zertifikat" 
+                 style="width: 80px; height: auto; transition: opacity 0.2s;" 
+                 onmouseover="this.style.opacity='0.8'" 
+                 onmouseout="this.style.opacity='1'">
+        </a>
+    </div>
+
     &copy; 2026 Echo Squad | Designed by ECHO_Druffy
 </footer>
 
